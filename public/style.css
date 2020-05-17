@@ -1,0 +1,209 @@
+:root {
+  --darkcyan: rgb(137, 176, 174);
+  --white: rgb(250, 249, 249);
+  --blue: rgb(85, 91, 110);
+  --tan: rgb(251, 214, 186);
+  --black: rgb(43, 57, 64);
+  --lightblue: rgb(190, 227, 219);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--lightblue);
+  color: var(--black);
+  font-family: "Muli", sans-serif;
+  text-align: center;
+}
+#initload {
+  display: none;
+  margin: auto;
+}
+#startml {
+  padding: 10px 20px;
+  border-color: var(--black);
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  transition-property: all;
+  transition-duration: 500ms;
+  background-color: var(--white);
+}
+
+#startml:hover {
+  background-color: #5bd476;
+}
+#startml:active {
+  background-color: greenyellow;
+}
+#advancedOpt {
+  display: none;
+}
+.switcher {
+  font-size: normal;
+  margin: 10px auto;
+}
+.label-title {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin: 10px auto;
+}
+canvas {
+  display: block;
+}
+h1 {
+  font-style: normal;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+#item {
+  font-size: 100px;
+  line-height: 200px;
+}
+
+.stage {
+  height: 270px;
+  width: 350px;
+  border-radius: 10px;
+  border: var(--black) 10px solid;
+  margin: 20px auto;
+  /* background-color: var(--white); */
+  --opacity: 0;
+  --hue: var(--black);
+  display: block;
+  overflow: hidden;
+}
+.stage:hover {
+  --hue: #8fa571;
+  --opacity: 100;
+}
+
+.data {
+  margin: auto;
+  color: whitesmoke;
+  font-size: 30px;
+  text-align: center;
+}
+
+.power {
+  opacity: var(--opacity);
+  transition-duration: 500ms;
+  transition-property: all;
+  fill: var(--hue);
+}
+
+nav {
+  font-style: normal;
+  padding: 0px;
+  height: 76px;
+  font-size: 30px;
+  text-align: none;
+  background-color: var(--darkcyan);
+}
+nav span a {
+  color: var(--black);
+  text-decoration: none;
+}
+nav span :hover {
+  background-color: var(--lightblue);
+}
+.title a {
+  float: left;
+  padding: 20px 40px;
+
+  transition-duration: 500ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(3);
+}
+.list a {
+  float: right;
+  padding: 20px 40px;
+
+  transition-duration: 500ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(3);
+}
+
+#videoElement {
+  height: 270px;
+  width: 350px;
+  background-color: #666;
+}
+
+/** SWITCH SNIPPETS  */
+#onoffswitchdiv {
+  display: none;
+}
+.onoffswitch {
+  height: 35px;
+  margin: auto;
+  position: relative;
+  width: 200px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 50px;
+}
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 31px;
+  line-height: 31px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "Advanced View On";
+  padding-left: 0px;
+  background-color: #eeeeee;
+  color: #5bd476;
+}
+.onoffswitch-inner:after {
+  content: "Advanced View Off";
+  padding-right: 21px;
+  background-color: #eeeeee;
+  color: #999999;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block;
+  width: 24px;
+  margin: 3.5px;
+  background: #a1a1a1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 165px;
+  border: 2px solid #999999;
+  border-radius: 50px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+  background-color: #5bd476;
+}

@@ -1,0 +1,20 @@
+.artic {
+  margin: 20px 550px;
+  text-align: left;
+}
+
+h1 {
+  font: 60px;
+  font-weight: bolder;
+  padding: 2px;
+}
+
+h2 {
+  font: 40px;
+  font-weight: 700;
+}
+
+p {
+  font: normal;
+  word-wrap: break-word;
+}

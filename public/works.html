@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./extrastyles.css" />
+    <title>How It Works</title>
+  </head>
+  <body>
+    <nav>
+      <span class="title">
+        <a href="index.html">Hands Down</a>
+      </span>
+      <span class="list">
+        <a href="works.html">How it Works</a>
+      </span>
+    </nav>
+    <div class="artic">
+      <h1>How <i>Hands Down</i> Works:</h1>
+
+      <h2>Machine Learning:</h2>
+      <p>
+        Hands Down uses Google's TensorFlow library along with a specific model
+        in order to predict when the user will touch their face. Essentially, a
+        machine learning model is like blackbox. In this case, the input to the
+        blackbox is images and the output decides what class the image best
+        fits. When training this model, it would be given a group of images for
+        each class. For example, the first class is called "normal". Normal is a
+        set of images of people sitting at their desk, working without touching
+        their face. For training, the model takes in around 70% of the images to
+        be trained. It rewards itself when it predicts and image correctly and
+        tweaks itself when it errs. The last 30% of images are used to test the
+        accuracy of the model, similar to a final exam for an academic class.
+        Unfortunately, the model was only trained with images of one person so
+        it is not as powerful as it could have been. Once the model is trained
+        and created, it gets integrated into the project through a
+        <a href="https://teachablemachine.withgoogle.com/models/Ou_2Y3sHi/"
+          >link to the teachable machine</a
+        >. To use data from the model I call
+        <code>prediction[i].probability</code> each <code>i</code> representing
+        a class such as 'normal' or 'faceTouch'. This returns the models
+        prediction of how likely it is to be a certain class. I use this data so
+        that when a threshold (which is customizable in the Advanced View) is
+        passed, a tone is played.
+      </p>
+      <h2>Stack:</h2>
+      <p>
+        This project does not use a framework. It uses a couple libraries such
+        as a loading bar library, TensorFlow, and firebase. Though there is no
+        backend storage, Firebase was used to host the website. Firebase was
+        chosen because it was free and easy to use. A github repo was not used
+        throughout the whole project (which I regret), but you can view the code
+        at <a>this github link</a>
+      </p>
+    </div>
+  </body>
+</html>
