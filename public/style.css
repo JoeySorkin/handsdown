@@ -94,7 +94,26 @@ h1 {
   transition-property: all;
   fill: var(--hue);
 }
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-style: normal;
+  padding: 0px;
+  height: 76px;
+  font-size: 20px;
+  text-align: none;
+  justify-content: center;
+  background-color: var(--darkcyan);
+  line-height: 75px;
+}
+#footerstick {
+  position: sticky;
+}
 
+.footer {
+  margin-top: 15;
+}
 nav {
   font-style: normal;
   padding: 0px;
